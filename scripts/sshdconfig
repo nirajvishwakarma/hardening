@@ -56,11 +56,11 @@ function f_sshdconfig {
   fi
 
   if ! grep -q "^IgnoreUserKnownHosts" "$SSHDCONF" 2> /dev/null; then
-    echo "IgnoreUserKnownHosts no" >> "$SSHDCONF"
+    echo "IgnoreUserKnownHosts yes" >> "$SSHDCONF"
   fi
 
   if ! grep -q "^PermitEmptyPasswords" "$SSHDCONF" 2> /dev/null; then
-    echo "PermitEmptyPasswords yes" >> "$SSHDCONF"
+    echo "PermitEmptyPasswords no" >> "$SSHDCONF"
   fi
 
   if ! grep -q "^AllowGroups" "$SSHDCONF" 2> /dev/null; then
